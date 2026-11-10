@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 40% 98%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --primary: 221 83% 53%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 94%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 210 40% 94%;
+  --muted-foreground: 215 16% 42%;
+  --accent: 199 89% 92%;
+  --accent-foreground: 222 47% 11%;
+  --border: 214 32% 88%;
+  --input: 214 32% 88%;
+  --ring: 221 83% 53%;
+  --radius: 0.75rem;
+  color-scheme: light;
+}
+
+.dark {
+  --background: 222 47% 8%;
+  --foreground: 210 40% 96%;
+  --card: 222 35% 12%;
+  --primary: 217 91% 65%;
+  --primary-foreground: 222 47% 11%;
+  --secondary: 217 25% 19%;
+  --secondary-foreground: 210 40% 96%;
+  --muted: 217 25% 19%;
+  --muted-foreground: 215 20% 70%;
+  --accent: 217 32% 22%;
+  --accent-foreground: 210 40% 96%;
+  --border: 217 25% 24%;
+  --input: 217 25% 24%;
+  --ring: 217 91% 65%;
+  color-scheme: dark;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+a,
+button,
+input,
+select,
+summary,
+[tabindex]:not([tabindex="-1"]) {
+  outline-offset: 3px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 2px solid hsl(var(--ring));
+}
+
+.dark .bg-white,
+.dark .bg-white\/70,
+.dark .bg-white\/80 {
+  background-color: hsl(var(--card));
+}
+
+.dark .bg-slate-50,
+.dark .bg-slate-100 {
+  background-color: hsl(var(--muted));
+}
+
+.dark .bg-blue-50,
+.dark .bg-blue-50\/60 {
+  background-color: hsl(217 45% 21%);
+}
+
+.dark .bg-emerald-50 {
+  background-color: hsl(158 45% 18%);
+}
+
+.dark .bg-amber-50 {
+  background-color: hsl(35 55% 19%);
+}
+
+.dark .bg-rose-50,
+.dark .bg-red-50 {
+  background-color: hsl(0 42% 20%);
+}
+
+.dark .text-slate-950,
+.dark .text-slate-900,
+.dark .text-slate-800 {
+  color: hsl(210 40% 96%);
+}
+
+.dark .text-slate-700 {
+  color: hsl(210 30% 88%);
+}
+
+.dark .text-slate-600,
+.dark .text-slate-500,
+.dark .text-slate-400 {
+  color: hsl(215 20% 72%);
+}
+
+.dark .text-blue-700,
+.dark .text-blue-800,
+.dark .text-blue-900 {
+  color: hsl(213 94% 82%);
+}
+
+.dark .text-emerald-800 {
+  color: hsl(151 76% 80%);
+}
+
+.dark .text-amber-900 {
+  color: hsl(43 96% 78%);
+}
+
+.dark .text-rose-800,
+.dark .text-red-700,
+.dark .text-red-800 {
+  color: hsl(0 91% 82%);
+}
+
+.dark .ring-emerald-200 {
+  --tw-ring-color: hsl(158 45% 35%);
+}
+
+.dark .ring-amber-200 {
+  --tw-ring-color: hsl(35 55% 40%);
+}
+
+.dark .border-blue-200,
+.dark .border-blue-300 {
+  border-color: hsl(217 45% 38%);
+}
+
+.dark .border-emerald-200 {
+  border-color: hsl(158 45% 35%);
+}
+
+.dark .border-amber-200 {
+  border-color: hsl(35 55% 40%);
+}
+
+.dark .border-rose-200 {
+  border-color: hsl(0 42% 40%);
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  color: hsl(var(--foreground));
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: hsl(var(--muted-foreground));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
